@@ -16,3 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// (2)
+Route::get('/path', 'HelloController@index');
+
+/*
+Route::get('hello/{message}', function($message)
+{
+    return 'Hello World' . $message;
+});
+*/
+
+//Route::get('/hello/{message}', 'App\Http\Controllers\helloController@goodmorning');
+//Route::get('/hello/{message}', 'app\Http\Controllers\helloController@goodmorning');
+
+Route::get('/hello','App\Http\Controllers\HelloController@index');
+
+///Users/natsumi/Documents/kappa_laravel/backend/app/Http/Controllers/HelloController.php
